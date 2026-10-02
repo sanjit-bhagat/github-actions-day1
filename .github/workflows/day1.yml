@@ -1,0 +1,29 @@
+name: My First GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello Sanjit! GitHub Actions is working."
+
+      - name: Show current directory
+        run: pwd
+
+      - name: Show files
+        run: ls
+
+      - name: Check Git version
+        run: git --version
+
+      - name: Check Python version
+        run: python --version
+
+      - name: Check Docker version
+        run: docker --version
